@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header style="height: 80px;">
+        <div class="logo">
+
+            <h1 style="color: white;font-size: 25px;word-spacing:5px;line-height: 80px;margin-top: 20px;">ONLINE LIBRARY
+                MANAGRMENT SYSTEM </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="student_login.html">BOOKS</a></li>
+                <li><a href="">STUDENT-LOGIN</a></li>
+                <li><a href="registration.html">REGISTRATION</a></li>
+                <li><a href="">FEEDBACK</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="reg_img">
+            <br>
+            <div class="box2">
+                <h1 style="text-align: center;font-size: 35px;font-family: lucida console;"> Library management system
+                </h1><br>
+                <h1 style="text-align: center;font-size: 25px;"> User Registration Form</h1><br>
+                <form name="registration" action="" method=""  onsubmit="return validate()">
+                    <br><br>
+                    <div class="login">
+                        <input type="text" name="first" placeholder=" first name" ><br><br>
+                        <input type="text" name="last" placeholder="Last name" ><br><br>
+                        <input type="text" name="uname" placeholder="enter user name" ><br><br>
+                        <input type="password" name="pwd" placeholder="password" ><br><br>
+                        <input type="number" name="Roll" placeholder="enter roll no." required=""><br><br>
+                        <input type="email" name="Email" placeholder="enter Email" required=""><br><br>
+                        <button>Sing up</button>
+                    </div>
+                </form>
+                <br><br>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</html>
+
+<!-- ........validation code....... -->
+
+    <script>
+    
+    function validate()
+    {    var first=document.registration.first.value;
+        var last=document.registration.last.value;
+        var uname=document.registration.uname.value;
+        var pwd=document.registration.pwd.value;
+
+        if(first==null||first==""){
+            alert('Username Should not be empty');
+            return false;
+        }
+        if(last==null||last==""){
+            alert('Username Should not be empty');
+            return false;
+        }
+        if(uname==null||uname==""){
+            alert('Username Should not be empty');
+            return false;
+        }
+        if(pwd==null||pwd==""){
+            alert('Password Should not be empty');
+            return false;
+        }else if(pwd.length<6)
+        {
+            alert('Password length must be greater than 6');
+            return false;
+        }
+    
+    
+    }
+    </script>
